@@ -12,7 +12,17 @@
     }
 
     section {
-      padding: 100px 10%;
+      padding: 120px 10%;
+    }
+
+    h1 {
+      font-size: 70px;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 40px;
     }
 
     .hero {
@@ -22,27 +32,40 @@
       justify-content: center;
     }
 
-    h1 {
-      font-size: 70px;
-      margin: 0;
-    }
-
-    h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
     }
 
     .project {
-      margin-bottom: 60px;
+      padding: 20px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .project:hover {
+      transform: scale(1.02);
+      background: #f5f5f5;
     }
 
     .project img {
       width: 100%;
       border-radius: 10px;
+      margin-bottom: 15px;
     }
 
     .small {
       color: #555;
+    }
+
+    .contact {
+      background: #111;
+      color: white;
+    }
+
+    .contact p {
+      color: #ccc;
     }
   </style>
 </head>
@@ -52,33 +75,40 @@
 <section class="hero">
   <h1>Riya Varia</h1>
   <p class="small">Aspiring Software Engineer | AI Builder | Student Innovator</p>
-  <p>Scroll ↓</p>
+  <p class="small">Scroll ↓</p>
 </section>
 
 <section>
   <h2>Projects</h2>
 
-  <div class="project">
-    <h3>BraillePath</h3>
-    <p>AI-powered assistive device using depth detection and computer vision.</p>
-  </div>
+  <div class="projects">
 
-  <div class="project">
-    <h3>EcoQuest</h3>
-    <p>Interactive game that teaches environmental science through simulation.</p>
+    <div class="project">
+      <img src="https://via.placeholder.com/1000x500" />
+      <h3>BraillePath</h3>
+      <p>AI-powered assistive device using computer vision and depth estimation to help visually impaired users navigate.</p>
+    </div>
+
+    <div class="project">
+      <img src="https://via.placeholder.com/1000x500" />
+      <h3>EcoQuest</h3>
+      <p>Interactive educational game that teaches climate science and environmental systems through simulation.</p>
+    </div>
+
   </div>
 </section>
 
 <section>
-  <h2>About Me</h2>
+  <h2>About</h2>
   <p>
-    I’m a high school student passionate about software engineering, AI, and building technology that makes a real-world impact. I enjoy working on projects that combine creativity with technical problem-solving.
+    I’m a high school student passionate about software engineering, artificial intelligence, and building technology that solves real-world problems. I enjoy creating projects that combine creativity with technical depth.
   </p>
 </section>
 
-<section>
+<section class="contact">
   <h2>Contact</h2>
   <p>Email: your-email@example.com</p>
+  <p>GitHub: github.com/riyavaria</p>
 </section>
 
 </body>
