@@ -1,115 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Riya Varia</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #ffffff;
-      color: #111;
-    }
-
-    section {
-      padding: 120px 10%;
-    }
-
-    h1 {
-      font-size: 70px;
-      margin: 0;
-    }
-
-    h2 {
-      font-size: 36px;
-      margin-bottom: 40px;
-    }
-
-    .hero {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .projects {
-      display: flex;
-      flex-direction: column;
-      gap: 60px;
-    }
-
-    .project {
-      padding: 20px;
-      border-radius: 12px;
-      transition: 0.3s;
-    }
-
-    .project:hover {
-      transform: scale(1.02);
-      background: #f5f5f5;
-    }
-
-    .project img {
-      width: 100%;
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .small {
-      color: #555;
-    }
-
-    .contact {
-      background: #111;
-      color: white;
-    }
-
-    .contact p {
-      color: #ccc;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Riya Varia — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
 
-<section class="hero">
-  <h1>Riya Varia</h1>
-  <p class="small">Aspiring Software Engineer | AI Builder | Student Innovator</p>
-  <p class="small">Scroll ↓</p>
-</section>
+  <!-- NAV -->
+  <nav class="nav">
+    <span class="nav-logo">RV</span>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<section>
-  <h2>Projects</h2>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <p class="hero-tag animate-fade-up" style="animation-delay:0.1s">Grade 11 · Toronto · 99% Average</p>
+      <h1 class="hero-name animate-fade-up" style="animation-delay:0.25s">
+        Riya<br/><em>Varia</em>
+      </h1>
+      <p class="hero-desc animate-fade-up" style="animation-delay:0.4s">
+        I build at the intersection of AI, hardware, and education.<br/>
+        Aspiring engineer. Math competitor. Student innovator.
+      </p>
+      <div class="hero-cta animate-fade-up" style="animation-delay:0.55s">
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-ghost">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-scroll">scroll ↓</div>
+  </section>
 
-  <div class="projects">
-
-    <div class="project">
-      <img src="https://via.placeholder.com/1000x500" />
-      <h3>BraillePath</h3>
-      <p>AI-powered assistive device using computer vision and depth estimation to help visually impaired users navigate.</p>
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="section-header">
+      <span class="section-label">Selected Work</span>
+      <h2 class="section-title">Projects</h2>
     </div>
 
-    <div class="project">
-      <img src="https://via.placeholder.com/1000x500" />
-      <h3>EcoQuest</h3>
-      <p>Interactive educational game that teaches climate science and environmental systems through simulation.</p>
+    <div class="projects-grid">
+
+      <!-- BraillePath -->
+      <article class="project-card project-card--featured">
+        <div class="project-image-wrap">
+          <img src="images/braillepath.jpg" alt="BraillePath project" class="project-image" onerror="this.parentElement.classList.add('no-image')" />
+          <div class="project-image-placeholder">
+            <span>⬡</span>
+            <p>Add braillepath.jpg to images/</p>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="project-tag">AI + Hardware</span>
+            <span class="project-status in-progress">In Progress</span>
+          </div>
+          <h3 class="project-name">BraillePath</h3>
+          <p class="project-subtitle">Wearable Navigation Aid for Deafblind Users</p>
+          <p class="project-desc">
+            A wearable assistive device that combines a refreshable braille display with real-time AI scene detection, 
+            helping deafblind users navigate their environment independently. Built with solenoids, a microcontroller, 
+            and computer vision — the interface and braille pin mechanism are designed in Autodesk Fusion.
+          </p>
+          <ul class="project-bullets">
+            <li>Refreshable braille display using solenoids & microcontroller</li>
+            <li>AI-based real-time scene detection</li>
+            <li>Custom braille pin mechanism in Autodesk Fusion</li>
+          </ul>
+          <div class="project-tech">
+            <span>Python</span><span>Computer Vision</span><span>Autodesk Fusion</span><span>Microcontroller</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- ML Education App -->
+      <article class="project-card">
+        <div class="project-image-wrap">
+          <img src="images/ml-app.jpg" alt="ML Education App" class="project-image" onerror="this.parentElement.classList.add('no-image')" />
+          <div class="project-image-placeholder">
+            <span>◈</span>
+            <p>Add ml-app.jpg to images/</p>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="project-tag">Android</span>
+            <span class="project-status in-progress">In Progress</span>
+          </div>
+          <h3 class="project-name">ML Education App</h3>
+          <p class="project-subtitle">Machine Learning for Beginners</p>
+          <p class="project-desc">
+            An interactive Android app designed to make machine learning accessible to beginners through 
+            visual explanations, interactive lessons, and hands-on exercises — no prior experience needed.
+          </p>
+          <ul class="project-bullets">
+            <li>Interactive mobile app teaching ML fundamentals</li>
+            <li>Beginner-friendly lessons with visual explanations</li>
+          </ul>
+          <div class="project-tech">
+            <span>Android Studio</span><span>Java</span><span>UI/UX</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Sustainable Water Filtration -->
+      <article class="project-card">
+        <div class="project-image-wrap">
+          <img src="images/water-filtration.jpg" alt="Water Filtration" class="project-image" onerror="this.parentElement.classList.add('no-image')" />
+          <div class="project-image-placeholder">
+            <span>◇</span>
+            <p>Add water-filtration.jpg to images/</p>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="project-tag">Science</span>
+            <span class="project-status complete">🥇 Gold Medal</span>
+          </div>
+          <h3 class="project-name">Water Filtration via Seashells</h3>
+          <p class="project-subtitle">Toronto Science Fair — Gold Medal</p>
+          <p class="project-desc">
+            Investigated using seashells and cilantro as ion-exchange materials for filtering heavy metals 
+            from contaminated water — a low-cost, sustainable purification method. Won the Gold Medal at 
+            the Toronto Science Fair.
+          </p>
+          <ul class="project-bullets">
+            <li>Ion exchange filtration testing with heavy metals</li>
+            <li>Seashells and cilantro as natural filtration media</li>
+          </ul>
+          <div class="project-tech">
+            <span>Chemistry</span><span>Environmental Science</span><span>Research</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- EcoQuest -->
+      <article class="project-card">
+        <div class="project-image-wrap">
+          <img src="images/ecoquest.jpg" alt="EcoQuest game" class="project-image" onerror="this.parentElement.classList.add('no-image')" />
+          <div class="project-image-placeholder">
+            <span>❋</span>
+            <p>Add ecoquest.jpg to images/</p>
+          </div>
+        </div>
+        <div class="project-info">
+          <div class="project-meta">
+            <span class="project-tag">Game Dev</span>
+            <span class="project-status complete">Complete</span>
+          </div>
+          <h3 class="project-name">EcoQuest</h3>
+          <p class="project-subtitle">Climate Education Game</p>
+          <p class="project-desc">
+            An interactive Python game built with Pygame that teaches players about climate change and 
+            greenhouse effects through simulation and gameplay. Features animations and real-time feedback 
+            to reinforce learning.
+          </p>
+          <ul class="project-bullets">
+            <li>Interactive climate & greenhouse effect simulation</li>
+            <li>Animations and in-game feedback system</li>
+          </ul>
+          <div class="project-tech">
+            <span>Python</span><span>Pygame</span><span>Game Design</span>
+          </div>
+        </div>
+      </article>
+
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- AWARDS -->
+  <section id="awards" class="section section--dark">
+    <div class="section-header">
+      <span class="section-label">Recognition</span>
+      <h2 class="section-title">Awards</h2>
+    </div>
+    <div class="awards-grid">
+      <div class="award-group">
+        <h4>School Awards</h4>
+        <ul>
+          <li>Bayview Glen Math Award <span>2025</span></li>
+          <li>Bayview Glen Computer Science Award <span>2024</span></li>
+          <li>Bayview Glen Scholarship Award <span>2023</span></li>
+          <li>Senior Girls Basketball MVP <span>2025</span></li>
+          <li>Senior Girls Volleyball MVP <span>2024</span></li>
+        </ul>
+      </div>
+      <div class="award-group">
+        <h4>Competitions</h4>
+        <ul>
+          <li>UW Cayley Contest — <em>Honor Roll (Top 0.5%)</em> <span>2025</span></li>
+          <li>UW Pascal Contest — <em>Honor Roll (Top 1%)</em> <span>2025</span></li>
+          <li>UW CIMC — <em>Honor Roll</em> <span>2025</span></li>
+          <li>CSMC — <em>Outstanding Achiever</em> · Invited to Lloyd Auckland Workshop <span>2025</span></li>
+          <li>COMC — <em>High Scorer</em> · Invited to Canada Math Camp, U of T <span>2025</span></li>
+          <li>AMC 10 — <em>Distinction</em> <span>2025</span></li>
+          <li>Toronto Science Fair — <em>Gold Medal</em> <span>2023</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
-<section>
-  <h2>About</h2>
-  <p>
-    I’m a high school student passionate about software engineering, artificial intelligence, and building technology that solves real-world problems. I enjoy creating projects that combine creativity with technical depth.
-  </p>
-</section>
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="section-header">
+      <span class="section-label">Toolkit</span>
+      <h2 class="section-title">Skills</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-block">
+        <h4>Languages</h4>
+        <div class="skill-chips">
+          <span>Python</span><span>Java</span><span>JavaScript</span><span>HTML/CSS</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h4>Tools & Environments</h4>
+        <div class="skill-chips">
+          <span>Autodesk Fusion</span><span>Git</span><span>VS Code</span><span>Node.js</span><span>Android Studio</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h4>Hardware & Electronics</h4>
+        <div class="skill-chips">
+          <span>Circuit Design</span><span>Microcontroller</span><span>Solenoids</span>
+        </div>
+      </div>
+      <div class="skill-block">
+        <h4>Soft Skills</h4>
+        <div class="skill-chips">
+          <span>Communication</span><span>Teamwork</span><span>Self-directed</span><span>Leadership</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<section class="contact">
-  <h2>Contact</h2>
-  <p>Email: your-email@example.com</p>
-  <p>GitHub: github.com/riyavaria</p>
-</section>
+  <!-- CONTACT -->
+  <section id="contact" class="section section--dark">
+    <div class="contact-inner">
+      <h2 class="contact-headline">Let's connect.</h2>
+      <p class="contact-sub">I'm always open to new opportunities, collaborations, and conversations.</p>
+      <div class="contact-links">
+        <a href="mailto:riya.varia@gmail.com" class="contact-link">
+          <span class="contact-icon">✉</span>
+          riya.varia@gmail.com
+        </a>
+        <a href="tel:4163202365" class="contact-link">
+          <span class="contact-icon">✆</span>
+          416-320-2365
+        </a>
+        <span class="contact-link">
+          <span class="contact-icon">⌖</span>
+          49 Davean Drive, Toronto
+        </span>
+      </div>
+    </div>
+  </section>
 
+  <footer class="footer">
+    <span>© 2025 Riya Varia</span>
+    <span>Built with care ✦</span>
+  </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
